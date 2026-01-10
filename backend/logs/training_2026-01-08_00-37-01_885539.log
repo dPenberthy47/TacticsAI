@@ -1,0 +1,189 @@
+2026-01-08 00:37:02.826 | INFO     | __main__:main:320 - ============================================================
+2026-01-08 00:37:02.826 | INFO     | __main__:main:321 - TacticsAI Training
+2026-01-08 00:37:02.826 | INFO     | __main__:main:322 - ============================================================
+2026-01-08 00:37:02.826 | INFO     | __main__:main:323 - Arguments: {'epochs': 10, 'batch_size': 32, 'lr': 0.001, 'patience': 10, 'max_matches': 100, 'val_split': 0.2, 'synthetic': False, 'synthetic_samples': 1000, 'hidden_dim': 64, 'num_layers': 3, 'simple_model': False, 'model_path': 'backend/models/saved/tacticsai.pt', 'no_save': False}
+2026-01-08 00:37:02.826 | INFO     | __main__:load_data:140 - ============================================================
+2026-01-08 00:37:02.827 | INFO     | __main__:load_data:141 - Loading data...
+2026-01-08 00:37:02.827 | INFO     | __main__:load_data:147 - Loading from StatsBomb open data
+2026-01-08 00:37:02.827 | INFO     | data.dataset:from_statsbomb:195 - Loading StatsBomb data (competition=2, season=27)
+2026-01-08 00:37:02.827 | DEBUG    | data.fetchers:__init__:53 - Initialized StatsBombFetcher with cache at backend/data/cache
+2026-01-08 00:37:02.859 | INFO     | data.fetchers:_get_cached:125 - Cache hit for matches_2_27 (380 rows)
+2026-01-08 00:37:02.859 | INFO     | data.dataset:from_statsbomb:210 - Processing 100 matches
+2026-01-08 00:37:02.860 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754058
+2026-01-08 00:37:02.862 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754245
+2026-01-08 00:37:02.863 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754136
+2026-01-08 00:37:02.865 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754037
+2026-01-08 00:37:02.866 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754039
+2026-01-08 00:37:02.868 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754041
+2026-01-08 00:37:02.869 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754042
+2026-01-08 00:37:02.871 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754043
+2026-01-08 00:37:02.872 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754045
+2026-01-08 00:37:02.873 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754048
+2026-01-08 00:37:02.875 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754049
+2026-01-08 00:37:02.876 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754050
+2026-01-08 00:37:02.877 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754052
+2026-01-08 00:37:02.878 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754053
+2026-01-08 00:37:02.880 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754055
+2026-01-08 00:37:02.881 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754226
+2026-01-08 00:37:02.883 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754014
+2026-01-08 00:37:02.884 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754091
+2026-01-08 00:37:02.885 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754135
+2026-01-08 00:37:02.887 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754293
+2026-01-08 00:37:02.888 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754339
+2026-01-08 00:37:02.889 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754146
+2026-01-08 00:37:02.890 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754347
+2026-01-08 00:37:02.891 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754255
+2026-01-08 00:37:02.893 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754278
+2026-01-08 00:37:02.894 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753979
+2026-01-08 00:37:02.895 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753972
+2026-01-08 00:37:02.896 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753978
+2026-01-08 00:37:02.898 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753974
+2026-01-08 00:37:02.899 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753993
+2026-01-08 00:37:02.900 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753983
+2026-01-08 00:37:02.902 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754015
+2026-01-08 00:37:02.903 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754038
+2026-01-08 00:37:02.904 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754001
+2026-01-08 00:37:02.905 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754007
+2026-01-08 00:37:02.907 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754008
+2026-01-08 00:37:02.908 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754029
+2026-01-08 00:37:02.909 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753995
+2026-01-08 00:37:02.911 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753999
+2026-01-08 00:37:02.912 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754017
+2026-01-08 00:37:02.913 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754006
+2026-01-08 00:37:02.914 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754023
+2026-01-08 00:37:02.915 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753984
+2026-01-08 00:37:02.917 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754011
+2026-01-08 00:37:02.918 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754010
+2026-01-08 00:37:02.919 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754028
+2026-01-08 00:37:02.920 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753996
+2026-01-08 00:37:02.922 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754025
+2026-01-08 00:37:02.923 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754068
+2026-01-08 00:37:02.924 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754056
+2026-01-08 00:37:02.926 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754040
+2026-01-08 00:37:02.927 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754074
+2026-01-08 00:37:02.928 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754076
+2026-01-08 00:37:02.929 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754067
+2026-01-08 00:37:02.930 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754079
+2026-01-08 00:37:02.932 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754090
+2026-01-08 00:37:02.933 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754083
+2026-01-08 00:37:02.934 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754077
+2026-01-08 00:37:02.936 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754060
+2026-01-08 00:37:02.937 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754073
+2026-01-08 00:37:02.938 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754085
+2026-01-08 00:37:02.940 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754047
+2026-01-08 00:37:02.941 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754051
+2026-01-08 00:37:02.942 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754093
+2026-01-08 00:37:02.944 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754046
+2026-01-08 00:37:02.945 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754072
+2026-01-08 00:37:02.946 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754082
+2026-01-08 00:37:02.947 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754106
+2026-01-08 00:37:02.949 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754099
+2026-01-08 00:37:02.950 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754098
+2026-01-08 00:37:02.951 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754057
+2026-01-08 00:37:02.953 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754112
+2026-01-08 00:37:02.954 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754117
+2026-01-08 00:37:02.955 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754104
+2026-01-08 00:37:02.956 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754054
+2026-01-08 00:37:02.958 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754113
+2026-01-08 00:37:02.959 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754107
+2026-01-08 00:37:02.960 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754105
+2026-01-08 00:37:02.961 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754097
+2026-01-08 00:37:02.963 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754102
+2026-01-08 00:37:02.964 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754115
+2026-01-08 00:37:02.965 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754148
+2026-01-08 00:37:02.966 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754169
+2026-01-08 00:37:02.967 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754174
+2026-01-08 00:37:02.969 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754185
+2026-01-08 00:37:02.970 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754162
+2026-01-08 00:37:02.971 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754096
+2026-01-08 00:37:02.972 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754171
+2026-01-08 00:37:02.974 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754119
+2026-01-08 00:37:02.975 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754126
+2026-01-08 00:37:02.976 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754133
+2026-01-08 00:37:02.977 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754167
+2026-01-08 00:37:02.979 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754145
+2026-01-08 00:37:02.980 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754153
+2026-01-08 00:37:02.981 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754143
+2026-01-08 00:37:02.982 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754186
+2026-01-08 00:37:02.984 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754130
+2026-01-08 00:37:02.985 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754188
+2026-01-08 00:37:02.986 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754178
+2026-01-08 00:37:02.987 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754157
+2026-01-08 00:37:02.988 | INFO     | data.dataset:from_statsbomb:227 - Created 100 matchups from StatsBomb data
+2026-01-08 00:37:02.988 | INFO     | data.dataset:__init__:155 - MatchupDataset initialized with 100 samples
+2026-01-08 00:37:02.989 | INFO     | data.dataset:split:529 - Split: 80 train, 20 val
+2026-01-08 00:37:02.989 | INFO     | data.dataset:__init__:155 - MatchupDataset initialized with 80 samples
+2026-01-08 00:37:02.989 | INFO     | data.dataset:__init__:155 - MatchupDataset initialized with 20 samples
+2026-01-08 00:37:02.989 | INFO     | __main__:load_data:161 - Train samples: 80
+2026-01-08 00:37:02.989 | INFO     | __main__:load_data:162 - Val samples: 20
+2026-01-08 00:37:02.989 | INFO     | __main__:create_model:181 - ============================================================
+2026-01-08 00:37:02.989 | INFO     | __main__:create_model:182 - Creating model...
+2026-01-08 00:37:02.989 | INFO     | __main__:create_model:191 - Using TacticsGNN
+2026-01-08 00:37:03.029 | INFO     | __main__:create_model:200 - Model parameters: 36,747
+2026-01-08 00:37:03.029 | INFO     | __main__:train_model:207 - ============================================================
+2026-01-08 00:37:03.029 | INFO     | __main__:train_model:208 - Starting training...
+2026-01-08 00:37:03.038 | INFO     | models.trainer:get_device:158 - Using Apple Silicon MPS
+2026-01-08 00:37:03.053 | INFO     | models.trainer:__init__:207 - Model has 36,747 trainable parameters
+2026-01-08 00:37:03.054 | INFO     | models.trainer:__init__:247 - TacticsTrainer initialized | device=mps | epochs=10
+2026-01-08 00:37:03.054 | INFO     | models.trainer:train:597 - ============================================================
+2026-01-08 00:37:03.054 | INFO     | models.trainer:train:598 - Starting training
+2026-01-08 00:37:03.054 | INFO     | models.trainer:train:599 -   Epochs: 10
+2026-01-08 00:37:03.054 | INFO     | models.trainer:train:600 -   Patience: 10
+2026-01-08 00:37:03.054 | INFO     | models.trainer:train:601 -   Learning rate: 0.001
+2026-01-08 00:37:03.054 | INFO     | models.trainer:train:602 -   Device: mps
+2026-01-08 00:37:03.054 | INFO     | models.trainer:train:603 - ============================================================
+2026-01-08 00:37:03.732 | ERROR    | __main__:main:351 - Training failed: stack expects each tensor to be equal size, but got [20] at entry 0 and [20, 9] at entry 1
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/Users/adrianapenberthy/Documents/AIPM/PythonProjects/TacticsAI/backend/scripts/train.py", line 356, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x126937950>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+> File "/Users/adrianapenberthy/Documents/AIPM/PythonProjects/TacticsAI/backend/scripts/train.py", line 336, in main
+    trainer, history = train_model(args, model, train_loader, val_loader)
+                       │           │     │      │             └ <torch_geometric.loader.dataloader.DataLoader object at 0x1262e5bd0>
+                       │           │     │      └ <torch_geometric.loader.dataloader.DataLoader object at 0x1260378c0>
+                       │           │     └ TacticsGNN(
+                       │           │         (input_proj): Linear(in_features=8, out_features=64, bias=True)
+                       │           │         (gcn_layers): ModuleList(
+                       │           │           (0-2): 3 x GCNC...
+                       │           └ Namespace(epochs=10, batch_size=32, lr=0.001, patience=10, max_matches=100, val_split=0.2, synthetic=False, synthetic_samples...
+                       └ <function train_model at 0x1269362a0>
+
+  File "/Users/adrianapenberthy/Documents/AIPM/PythonProjects/TacticsAI/backend/scripts/train.py", line 227, in train_model
+    history = trainer.train()
+              │       └ <function TacticsTrainer.train at 0x126937270>
+              └ <models.trainer.TacticsTrainer object at 0x127c581a0>
+
+  File "/Users/adrianapenberthy/Documents/AIPM/PythonProjects/TacticsAI/backend/models/trainer.py", line 615, in train
+    val_metrics = self.validate()
+                  │    └ <function TacticsTrainer.validate at 0x126937110>
+                  └ <models.trainer.TacticsTrainer object at 0x127c581a0>
+
+  File "/Users/adrianapenberthy/Documents/AIPM/PythonProjects/TacticsAI/backend/venv/lib/python3.14/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           │     │       └ {}
+           │     └ (<models.trainer.TacticsTrainer object at 0x127c581a0>,)
+           └ <function TacticsTrainer.validate at 0x126937060>
+
+  File "/Users/adrianapenberthy/Documents/AIPM/PythonProjects/TacticsAI/backend/models/trainer.py", line 547, in validate
+    labels = torch.stack(labels).to(self.device) if isinstance(labels, list) else labels.to(self.device)
+             │     │     │          │    │                     │                  │         │    └ device(type='mps')
+             │     │     │          │    │                     │                  │         └ <models.trainer.TacticsTrainer object at 0x127c581a0>
+             │     │     │          │    │                     │                  └ [tensor([0.5000, 0.0000, 1.0000, 1.0000, 0.0000, 0.0000, 1.0000, 0.5000, 0.5000,
+             │     │     │          │    │                     │                            0.0000, 0.5000, 0.0000, 0.0000, 0.00...
+             │     │     │          │    │                     └ [tensor([0.5000, 0.0000, 1.0000, 1.0000, 0.0000, 0.0000, 1.0000, 0.5000, 0.5000,
+             │     │     │          │    │                               0.0000, 0.5000, 0.0000, 0.0000, 0.00...
+             │     │     │          │    └ device(type='mps')
+             │     │     │          └ <models.trainer.TacticsTrainer object at 0x127c581a0>
+             │     │     └ [tensor([0.5000, 0.0000, 1.0000, 1.0000, 0.0000, 0.0000, 1.0000, 0.5000, 0.5000,
+             │     │               0.0000, 0.5000, 0.0000, 0.0000, 0.00...
+             │     └ <built-in method stack of type object at 0x10736b5b8>
+             └ <module 'torch' from '/Users/adrianapenberthy/Documents/AIPM/PythonProjects/TacticsAI/backend/venv/lib/python3.14/site-packag...
+
+RuntimeError: stack expects each tensor to be equal size, but got [20] at entry 0 and [20, 9] at entry 1

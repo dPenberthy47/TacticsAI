@@ -1,0 +1,97 @@
+2026-01-09 21:45:35.066 | INFO     | __main__:main:404 - ============================================================
+2026-01-09 21:45:35.066 | INFO     | __main__:main:405 - TacticsAI Training
+2026-01-09 21:45:35.066 | INFO     | __main__:main:406 - ============================================================
+2026-01-09 21:45:35.066 | INFO     | __main__:main:407 - Arguments: {'epochs': 20, 'batch_size': 32, 'lr': 0.001, 'patience': 10, 'data_source': 'synthetic', 'season': '2015-2016', 'max_matches': None, 'val_split': 0.2, 'synthetic': False, 'synthetic_samples': 500, 'node_features': 12, 'edge_features': 6, 'hidden_dim': 64, 'num_layers': 3, 'simple_model': False, 'model_path': 'backend/models/saved/tacticsai.pt', 'no_save': False}
+2026-01-09 21:45:35.066 | INFO     | __main__:load_data:201 - ============================================================
+2026-01-09 21:45:35.066 | INFO     | __main__:load_data:202 - Loading data...
+2026-01-09 21:45:35.066 | INFO     | __main__:load_data:223 - Creating synthetic dataset with 500 samples
+2026-01-09 21:45:35.066 | INFO     | data.dataset:create_synthetic:1139 - Creating synthetic dataset with 500 samples
+2026-01-09 21:45:35.222 | INFO     | data.dataset:__init__:207 - MatchupDataset initialized with 500 samples
+2026-01-09 21:45:35.222 | INFO     | __main__:validate_dataset:165 - ============================================================
+2026-01-09 21:45:35.222 | INFO     | __main__:validate_dataset:166 - Validating dataset...
+2026-01-09 21:45:35.222 | INFO     | __main__:validate_dataset:179 - Dataset validation:
+2026-01-09 21:45:35.222 | INFO     | __main__:validate_dataset:180 -   Samples: 500
+2026-01-09 21:45:35.222 | INFO     | __main__:validate_dataset:181 -   Node features: 12 (expected: 12)
+2026-01-09 21:45:35.222 | INFO     | __main__:validate_dataset:182 -   Edge features: 6 (expected: 6)
+2026-01-09 21:45:35.223 | INFO     | __main__:validate_dataset:183 -   Nodes per graph: 11
+2026-01-09 21:45:35.223 | INFO     | __main__:validate_dataset:188 - ✓ Using enhanced node features (12D)
+2026-01-09 21:45:35.223 | INFO     | __main__:validate_dataset:193 - ✓ Using enhanced edge features (6D)
+2026-01-09 21:45:35.223 | INFO     | data.dataset:split:1255 - Split: 400 train, 100 val
+2026-01-09 21:45:35.223 | INFO     | data.dataset:__init__:207 - MatchupDataset initialized with 400 samples
+2026-01-09 21:45:35.223 | INFO     | data.dataset:__init__:207 - MatchupDataset initialized with 100 samples
+2026-01-09 21:45:35.223 | INFO     | __main__:load_data:236 - Train samples: 400
+2026-01-09 21:45:35.223 | INFO     | __main__:load_data:237 - Val samples: 100
+2026-01-09 21:45:35.223 | INFO     | __main__:create_model:256 - ============================================================
+2026-01-09 21:45:35.223 | INFO     | __main__:create_model:257 - Creating model...
+2026-01-09 21:45:35.223 | INFO     | __main__:create_model:268 - Using TacticsGNN
+2026-01-09 21:45:35.254 | INFO     | __main__:create_model:279 - Model configuration:
+2026-01-09 21:45:35.254 | INFO     | __main__:create_model:280 -   Node features: 12D
+2026-01-09 21:45:35.254 | INFO     | __main__:create_model:281 -   Edge features: 6D
+2026-01-09 21:45:35.254 | INFO     | __main__:create_model:282 -   Hidden dimension: 64
+2026-01-09 21:45:35.254 | INFO     | __main__:create_model:283 -   Layers: 3
+2026-01-09 21:45:35.254 | INFO     | __main__:create_model:284 -   Parameters: 46,603
+2026-01-09 21:45:35.254 | INFO     | __main__:train_model:291 - ============================================================
+2026-01-09 21:45:35.254 | INFO     | __main__:train_model:292 - Starting training...
+2026-01-09 21:45:35.266 | INFO     | models.trainer:get_device:158 - Using Apple Silicon MPS
+2026-01-09 21:45:35.294 | INFO     | models.trainer:__init__:207 - Model has 46,603 trainable parameters
+2026-01-09 21:45:35.295 | INFO     | models.trainer:__init__:247 - TacticsTrainer initialized | device=mps | epochs=20
+2026-01-09 21:45:35.295 | INFO     | models.trainer:train:604 - ============================================================
+2026-01-09 21:45:35.295 | INFO     | models.trainer:train:605 - Starting training
+2026-01-09 21:45:35.295 | INFO     | models.trainer:train:606 -   Epochs: 20
+2026-01-09 21:45:35.295 | INFO     | models.trainer:train:607 -   Patience: 10
+2026-01-09 21:45:35.295 | INFO     | models.trainer:train:608 -   Learning rate: 0.001
+2026-01-09 21:45:35.295 | INFO     | models.trainer:train:609 -   Device: mps
+2026-01-09 21:45:35.295 | INFO     | models.trainer:train:610 - ============================================================
+2026-01-09 21:45:51.223 | INFO     | models.trainer:train:640 - Epoch 1/20 | Train Loss: 0.2594 | Val Loss: 0.2085 | Acc: 66.00% | MAE: 0.0680 | LR: 9.94e-04 | Time: 15.9s
+2026-01-09 21:45:51.259 | DEBUG    | models.trainer:save_checkpoint:716 - Checkpoint saved to backend/models/saved/best_model.pt
+2026-01-09 21:45:51.259 | INFO     | models.trainer:train:659 -   ✓ New best model saved (val_loss=0.2085)
+2026-01-09 21:46:03.410 | INFO     | models.trainer:train:640 - Epoch 2/20 | Train Loss: 0.2307 | Val Loss: 0.2255 | Acc: 34.00% | MAE: 0.0834 | LR: 9.76e-04 | Time: 12.2s
+2026-01-09 21:46:03.411 | DEBUG    | models.trainer:train:662 -   No improvement. Patience: 1/10
+2026-01-09 21:46:15.148 | INFO     | models.trainer:train:640 - Epoch 3/20 | Train Loss: 0.2212 | Val Loss: 0.2198 | Acc: 34.00% | MAE: 0.0770 | LR: 9.46e-04 | Time: 11.7s
+2026-01-09 21:46:15.149 | DEBUG    | models.trainer:train:662 -   No improvement. Patience: 2/10
+2026-01-09 21:46:26.985 | INFO     | models.trainer:train:640 - Epoch 4/20 | Train Loss: 0.2243 | Val Loss: 0.2209 | Acc: 34.00% | MAE: 0.0727 | LR: 9.05e-04 | Time: 11.8s
+2026-01-09 21:46:26.986 | DEBUG    | models.trainer:train:662 -   No improvement. Patience: 3/10
+2026-01-09 21:46:38.738 | INFO     | models.trainer:train:640 - Epoch 5/20 | Train Loss: 0.2232 | Val Loss: 0.2226 | Acc: 34.00% | MAE: 0.0722 | LR: 8.54e-04 | Time: 11.8s
+2026-01-09 21:46:38.738 | DEBUG    | models.trainer:train:662 -   No improvement. Patience: 4/10
+2026-01-09 21:46:50.837 | INFO     | models.trainer:train:640 - Epoch 6/20 | Train Loss: 0.2223 | Val Loss: 0.2232 | Acc: 34.00% | MAE: 0.0727 | LR: 7.94e-04 | Time: 12.1s
+2026-01-09 21:46:50.838 | DEBUG    | models.trainer:train:662 -   No improvement. Patience: 5/10
+2026-01-09 21:47:02.869 | INFO     | models.trainer:train:640 - Epoch 7/20 | Train Loss: 0.2226 | Val Loss: 0.2171 | Acc: 34.00% | MAE: 0.0726 | LR: 7.27e-04 | Time: 12.0s
+2026-01-09 21:47:02.869 | DEBUG    | models.trainer:train:662 -   No improvement. Patience: 6/10
+2026-01-09 21:47:14.216 | INFO     | models.trainer:train:640 - Epoch 8/20 | Train Loss: 0.2211 | Val Loss: 0.2245 | Acc: 34.00% | MAE: 0.0753 | LR: 6.55e-04 | Time: 11.3s
+2026-01-09 21:47:14.216 | DEBUG    | models.trainer:train:662 -   No improvement. Patience: 7/10
+2026-01-09 21:47:25.722 | INFO     | models.trainer:train:640 - Epoch 9/20 | Train Loss: 0.2223 | Val Loss: 0.2174 | Acc: 34.00% | MAE: 0.0716 | LR: 5.79e-04 | Time: 11.5s
+2026-01-09 21:47:25.722 | DEBUG    | models.trainer:train:662 -   No improvement. Patience: 8/10
+2026-01-09 21:47:37.199 | INFO     | models.trainer:train:640 - Epoch 10/20 | Train Loss: 0.2228 | Val Loss: 0.2219 | Acc: 34.00% | MAE: 0.0727 | LR: 5.01e-04 | Time: 11.5s
+2026-01-09 21:47:37.199 | DEBUG    | models.trainer:train:662 -   No improvement. Patience: 9/10
+2026-01-09 21:47:48.896 | INFO     | models.trainer:train:640 - Epoch 11/20 | Train Loss: 0.2218 | Val Loss: 0.2187 | Acc: 34.00% | MAE: 0.0747 | LR: 4.22e-04 | Time: 11.7s
+2026-01-09 21:47:48.896 | DEBUG    | models.trainer:train:662 -   No improvement. Patience: 10/10
+2026-01-09 21:47:48.896 | INFO     | models.trainer:train:666 - Early stopping triggered at epoch 11
+2026-01-09 21:47:48.896 | INFO     | models.trainer:train:671 - ============================================================
+2026-01-09 21:47:48.896 | INFO     | models.trainer:train:672 - Training complete!
+2026-01-09 21:47:48.896 | INFO     | models.trainer:train:673 -   Total time: 2.2 minutes
+2026-01-09 21:47:48.896 | INFO     | models.trainer:train:674 -   Best val_loss: 0.2085
+2026-01-09 21:47:48.897 | INFO     | models.trainer:train:675 -   Final accuracy: 34.00%
+2026-01-09 21:47:48.897 | INFO     | models.trainer:train:676 - ============================================================
+2026-01-09 21:47:48.915 | DEBUG    | models.trainer:save_checkpoint:716 - Checkpoint saved to backend/models/saved/final_model.pt
+2026-01-09 21:47:48.931 | DEBUG    | models.trainer:save_checkpoint:716 - Checkpoint saved to backend/models/saved/tacticsai.pt
+2026-01-09 21:47:48.931 | INFO     | __main__:train_model:318 - Model saved to backend/models/saved/tacticsai.pt
+2026-01-09 21:47:48.931 | INFO     | __main__:evaluate_model:325 - ============================================================
+2026-01-09 21:47:48.931 | INFO     | __main__:evaluate_model:326 - Evaluation
+2026-01-09 21:47:48.965 | INFO     | models.trainer:load_checkpoint:740 - Checkpoint loaded from backend/models/saved/best_model.pt (epoch 0)
+2026-01-09 21:47:48.966 | INFO     | __main__:evaluate_model:332 - Loaded best model for evaluation
+2026-01-09 21:47:51.166 | INFO     | __main__:evaluate_model:337 - ----------------------------------------
+2026-01-09 21:47:51.166 | INFO     | __main__:evaluate_model:338 - Final Metrics:
+2026-01-09 21:47:51.166 | INFO     | __main__:evaluate_model:339 -   Validation Loss: 0.2085
+2026-01-09 21:47:51.166 | INFO     | __main__:evaluate_model:340 -   Accuracy: 66.00%
+2026-01-09 21:47:51.166 | INFO     | __main__:evaluate_model:341 -   MAE: 0.0680
+2026-01-09 21:47:51.166 | INFO     | __main__:evaluate_model:344 - ----------------------------------------
+2026-01-09 21:47:51.166 | INFO     | __main__:evaluate_model:345 - Sample Predictions:
+2026-01-09 21:47:51.166 | INFO     | models.trainer:get_device:158 - Using Apple Silicon MPS
+2026-01-09 21:47:51.346 | INFO     | __main__:evaluate_model:387 -   Sample 1: ✗ Pred=0.509 (Balanced) | True=0.4 (Draw)
+2026-01-09 21:47:51.444 | INFO     | __main__:evaluate_model:387 -   Sample 2: ✓ Pred=0.510 (Balanced) | True=0.6 (Draw)
+2026-01-09 21:47:51.543 | INFO     | __main__:evaluate_model:387 -   Sample 3: ✗ Pred=0.507 (Balanced) | True=0.3 (Team B won)
+2026-01-09 21:47:51.595 | INFO     | __main__:evaluate_model:387 -   Sample 4: ✗ Pred=0.509 (Balanced) | True=0.5 (Draw)
+2026-01-09 21:47:51.644 | INFO     | __main__:evaluate_model:387 -   Sample 5: ✗ Pred=0.508 (Balanced) | True=0.4 (Team B won)
+2026-01-09 21:47:51.645 | INFO     | __main__:main:425 - ============================================================
+2026-01-09 21:47:51.645 | INFO     | __main__:main:426 - Training complete!
+2026-01-09 21:47:51.645 | INFO     | __main__:main:427 - ============================================================

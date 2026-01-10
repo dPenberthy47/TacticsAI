@@ -1,0 +1,192 @@
+2026-01-08 00:37:47.618 | INFO     | __main__:main:320 - ============================================================
+2026-01-08 00:37:47.618 | INFO     | __main__:main:321 - TacticsAI Training
+2026-01-08 00:37:47.618 | INFO     | __main__:main:322 - ============================================================
+2026-01-08 00:37:47.618 | INFO     | __main__:main:323 - Arguments: {'epochs': 10, 'batch_size': 32, 'lr': 0.001, 'patience': 10, 'max_matches': 100, 'val_split': 0.2, 'synthetic': False, 'synthetic_samples': 1000, 'hidden_dim': 64, 'num_layers': 3, 'simple_model': False, 'model_path': 'backend/models/saved/tacticsai.pt', 'no_save': False}
+2026-01-08 00:37:47.618 | INFO     | __main__:load_data:140 - ============================================================
+2026-01-08 00:37:47.618 | INFO     | __main__:load_data:141 - Loading data...
+2026-01-08 00:37:47.618 | INFO     | __main__:load_data:147 - Loading from StatsBomb open data
+2026-01-08 00:37:47.618 | INFO     | data.dataset:from_statsbomb:195 - Loading StatsBomb data (competition=2, season=27)
+2026-01-08 00:37:47.618 | DEBUG    | data.fetchers:__init__:53 - Initialized StatsBombFetcher with cache at backend/data/cache
+2026-01-08 00:37:47.650 | INFO     | data.fetchers:_get_cached:125 - Cache hit for matches_2_27 (380 rows)
+2026-01-08 00:37:47.650 | INFO     | data.dataset:from_statsbomb:210 - Processing 100 matches
+2026-01-08 00:37:47.650 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754058
+2026-01-08 00:37:47.652 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754245
+2026-01-08 00:37:47.654 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754136
+2026-01-08 00:37:47.655 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754037
+2026-01-08 00:37:47.657 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754039
+2026-01-08 00:37:47.658 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754041
+2026-01-08 00:37:47.660 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754042
+2026-01-08 00:37:47.662 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754043
+2026-01-08 00:37:47.663 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754045
+2026-01-08 00:37:47.665 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754048
+2026-01-08 00:37:47.666 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754049
+2026-01-08 00:37:47.667 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754050
+2026-01-08 00:37:47.669 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754052
+2026-01-08 00:37:47.671 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754053
+2026-01-08 00:37:47.672 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754055
+2026-01-08 00:37:47.674 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754226
+2026-01-08 00:37:47.675 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754014
+2026-01-08 00:37:47.676 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754091
+2026-01-08 00:37:47.678 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754135
+2026-01-08 00:37:47.679 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754293
+2026-01-08 00:37:47.680 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754339
+2026-01-08 00:37:47.681 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754146
+2026-01-08 00:37:47.683 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754347
+2026-01-08 00:37:47.684 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754255
+2026-01-08 00:37:47.685 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754278
+2026-01-08 00:37:47.686 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753979
+2026-01-08 00:37:47.688 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753972
+2026-01-08 00:37:47.689 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753978
+2026-01-08 00:37:47.690 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753974
+2026-01-08 00:37:47.691 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753993
+2026-01-08 00:37:47.693 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753983
+2026-01-08 00:37:47.694 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754015
+2026-01-08 00:37:47.695 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754038
+2026-01-08 00:37:47.696 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754001
+2026-01-08 00:37:47.698 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754007
+2026-01-08 00:37:47.699 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754008
+2026-01-08 00:37:47.700 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754029
+2026-01-08 00:37:47.702 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753995
+2026-01-08 00:37:47.703 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753999
+2026-01-08 00:37:47.704 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754017
+2026-01-08 00:37:47.706 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754006
+2026-01-08 00:37:47.707 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754023
+2026-01-08 00:37:47.708 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753984
+2026-01-08 00:37:47.709 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754011
+2026-01-08 00:37:47.710 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754010
+2026-01-08 00:37:47.712 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754028
+2026-01-08 00:37:47.713 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3753996
+2026-01-08 00:37:47.715 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754025
+2026-01-08 00:37:47.716 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754068
+2026-01-08 00:37:47.717 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754056
+2026-01-08 00:37:47.719 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754040
+2026-01-08 00:37:47.720 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754074
+2026-01-08 00:37:47.721 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754076
+2026-01-08 00:37:47.723 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754067
+2026-01-08 00:37:47.724 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754079
+2026-01-08 00:37:47.725 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754090
+2026-01-08 00:37:47.727 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754083
+2026-01-08 00:37:47.728 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754077
+2026-01-08 00:37:47.729 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754060
+2026-01-08 00:37:47.731 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754073
+2026-01-08 00:37:47.732 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754085
+2026-01-08 00:37:47.734 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754047
+2026-01-08 00:37:47.735 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754051
+2026-01-08 00:37:47.736 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754093
+2026-01-08 00:37:47.738 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754046
+2026-01-08 00:37:47.739 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754072
+2026-01-08 00:37:47.740 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754082
+2026-01-08 00:37:47.741 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754106
+2026-01-08 00:37:47.743 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754099
+2026-01-08 00:37:47.744 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754098
+2026-01-08 00:37:47.745 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754057
+2026-01-08 00:37:47.747 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754112
+2026-01-08 00:37:47.748 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754117
+2026-01-08 00:37:47.749 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754104
+2026-01-08 00:37:47.750 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754054
+2026-01-08 00:37:47.752 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754113
+2026-01-08 00:37:47.753 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754107
+2026-01-08 00:37:47.754 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754105
+2026-01-08 00:37:47.755 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754097
+2026-01-08 00:37:47.757 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754102
+2026-01-08 00:37:47.758 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754115
+2026-01-08 00:37:47.759 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754148
+2026-01-08 00:37:47.760 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754169
+2026-01-08 00:37:47.762 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754174
+2026-01-08 00:37:47.763 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754185
+2026-01-08 00:37:47.764 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754162
+2026-01-08 00:37:47.766 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754096
+2026-01-08 00:37:47.767 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754171
+2026-01-08 00:37:47.768 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754119
+2026-01-08 00:37:47.769 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754126
+2026-01-08 00:37:47.771 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754133
+2026-01-08 00:37:47.772 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754167
+2026-01-08 00:37:47.773 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754145
+2026-01-08 00:37:47.775 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754153
+2026-01-08 00:37:47.776 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754143
+2026-01-08 00:37:47.777 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754186
+2026-01-08 00:37:47.778 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754130
+2026-01-08 00:37:47.780 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754188
+2026-01-08 00:37:47.781 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754178
+2026-01-08 00:37:47.782 | INFO     | data.fetchers:fetch_lineups:302 - Cache hit for lineups 3754157
+2026-01-08 00:37:47.783 | INFO     | data.dataset:from_statsbomb:227 - Created 100 matchups from StatsBomb data
+2026-01-08 00:37:47.783 | INFO     | data.dataset:__init__:155 - MatchupDataset initialized with 100 samples
+2026-01-08 00:37:47.783 | INFO     | data.dataset:split:529 - Split: 80 train, 20 val
+2026-01-08 00:37:47.783 | INFO     | data.dataset:__init__:155 - MatchupDataset initialized with 80 samples
+2026-01-08 00:37:47.783 | INFO     | data.dataset:__init__:155 - MatchupDataset initialized with 20 samples
+2026-01-08 00:37:47.783 | INFO     | __main__:load_data:161 - Train samples: 80
+2026-01-08 00:37:47.783 | INFO     | __main__:load_data:162 - Val samples: 20
+2026-01-08 00:37:47.784 | INFO     | __main__:create_model:181 - ============================================================
+2026-01-08 00:37:47.784 | INFO     | __main__:create_model:182 - Creating model...
+2026-01-08 00:37:47.784 | INFO     | __main__:create_model:191 - Using TacticsGNN
+2026-01-08 00:37:47.823 | INFO     | __main__:create_model:200 - Model parameters: 36,747
+2026-01-08 00:37:47.823 | INFO     | __main__:train_model:207 - ============================================================
+2026-01-08 00:37:47.823 | INFO     | __main__:train_model:208 - Starting training...
+2026-01-08 00:37:47.832 | INFO     | models.trainer:get_device:158 - Using Apple Silicon MPS
+2026-01-08 00:37:47.853 | INFO     | models.trainer:__init__:207 - Model has 36,747 trainable parameters
+2026-01-08 00:37:47.854 | INFO     | models.trainer:__init__:247 - TacticsTrainer initialized | device=mps | epochs=10
+2026-01-08 00:37:47.854 | INFO     | models.trainer:train:597 - ============================================================
+2026-01-08 00:37:47.854 | INFO     | models.trainer:train:598 - Starting training
+2026-01-08 00:37:47.854 | INFO     | models.trainer:train:599 -   Epochs: 10
+2026-01-08 00:37:47.854 | INFO     | models.trainer:train:600 -   Patience: 10
+2026-01-08 00:37:47.854 | INFO     | models.trainer:train:601 -   Learning rate: 0.001
+2026-01-08 00:37:47.854 | INFO     | models.trainer:train:602 -   Device: mps
+2026-01-08 00:37:47.854 | INFO     | models.trainer:train:603 - ============================================================
+2026-01-08 00:37:48.849 | INFO     | models.trainer:train:633 - Epoch 1/10 | Train Loss: 0.4935 | Val Loss: 0.4897 | Acc: 30.00% | MAE: 0.3654 | LR: 9.76e-04 | Time: 1.0s
+2026-01-08 00:37:48.881 | DEBUG    | models.trainer:save_checkpoint:709 - Checkpoint saved to backend/models/saved/best_model.pt
+2026-01-08 00:37:48.881 | INFO     | models.trainer:train:652 -   ✓ New best model saved (val_loss=0.4897)
+2026-01-08 00:37:49.155 | INFO     | models.trainer:train:633 - Epoch 2/10 | Train Loss: 0.4824 | Val Loss: 0.4859 | Acc: 30.00% | MAE: 0.3667 | LR: 9.05e-04 | Time: 0.3s
+2026-01-08 00:37:49.176 | DEBUG    | models.trainer:save_checkpoint:709 - Checkpoint saved to backend/models/saved/best_model.pt
+2026-01-08 00:37:49.176 | INFO     | models.trainer:train:652 -   ✓ New best model saved (val_loss=0.4859)
+2026-01-08 00:37:49.414 | INFO     | models.trainer:train:633 - Epoch 3/10 | Train Loss: 0.4674 | Val Loss: 0.4844 | Acc: 30.00% | MAE: 0.3617 | LR: 7.94e-04 | Time: 0.2s
+2026-01-08 00:37:49.435 | DEBUG    | models.trainer:save_checkpoint:709 - Checkpoint saved to backend/models/saved/best_model.pt
+2026-01-08 00:37:49.436 | INFO     | models.trainer:train:652 -   ✓ New best model saved (val_loss=0.4844)
+2026-01-08 00:37:49.706 | INFO     | models.trainer:train:633 - Epoch 4/10 | Train Loss: 0.4953 | Val Loss: 0.4853 | Acc: 30.00% | MAE: 0.3568 | LR: 6.55e-04 | Time: 0.3s
+2026-01-08 00:37:49.707 | DEBUG    | models.trainer:train:655 -   No improvement. Patience: 1/10
+2026-01-08 00:37:50.046 | INFO     | models.trainer:train:633 - Epoch 5/10 | Train Loss: 0.4956 | Val Loss: 0.4828 | Acc: 30.00% | MAE: 0.3517 | LR: 5.01e-04 | Time: 0.3s
+2026-01-08 00:37:50.065 | DEBUG    | models.trainer:save_checkpoint:709 - Checkpoint saved to backend/models/saved/best_model.pt
+2026-01-08 00:37:50.065 | INFO     | models.trainer:train:652 -   ✓ New best model saved (val_loss=0.4828)
+2026-01-08 00:37:50.354 | INFO     | models.trainer:train:633 - Epoch 6/10 | Train Loss: 0.4856 | Val Loss: 0.4812 | Acc: 55.00% | MAE: 0.3499 | LR: 3.46e-04 | Time: 0.3s
+2026-01-08 00:37:50.376 | DEBUG    | models.trainer:save_checkpoint:709 - Checkpoint saved to backend/models/saved/best_model.pt
+2026-01-08 00:37:50.376 | INFO     | models.trainer:train:652 -   ✓ New best model saved (val_loss=0.4812)
+2026-01-08 00:37:50.683 | INFO     | models.trainer:train:633 - Epoch 7/10 | Train Loss: 0.4810 | Val Loss: 0.4801 | Acc: 70.00% | MAE: 0.3503 | LR: 2.07e-04 | Time: 0.3s
+2026-01-08 00:37:50.701 | DEBUG    | models.trainer:save_checkpoint:709 - Checkpoint saved to backend/models/saved/best_model.pt
+2026-01-08 00:37:50.702 | INFO     | models.trainer:train:652 -   ✓ New best model saved (val_loss=0.4801)
+2026-01-08 00:37:51.050 | INFO     | models.trainer:train:633 - Epoch 8/10 | Train Loss: 0.4767 | Val Loss: 0.4796 | Acc: 70.00% | MAE: 0.3509 | LR: 9.64e-05 | Time: 0.3s
+2026-01-08 00:37:51.075 | DEBUG    | models.trainer:save_checkpoint:709 - Checkpoint saved to backend/models/saved/best_model.pt
+2026-01-08 00:37:51.075 | INFO     | models.trainer:train:652 -   ✓ New best model saved (val_loss=0.4796)
+2026-01-08 00:37:51.328 | INFO     | models.trainer:train:633 - Epoch 9/10 | Train Loss: 0.4757 | Val Loss: 0.4794 | Acc: 70.00% | MAE: 0.3511 | LR: 2.54e-05 | Time: 0.3s
+2026-01-08 00:37:51.350 | DEBUG    | models.trainer:save_checkpoint:709 - Checkpoint saved to backend/models/saved/best_model.pt
+2026-01-08 00:37:51.350 | INFO     | models.trainer:train:652 -   ✓ New best model saved (val_loss=0.4794)
+2026-01-08 00:37:51.577 | INFO     | models.trainer:train:633 - Epoch 10/10 | Train Loss: 0.4892 | Val Loss: 0.4793 | Acc: 70.00% | MAE: 0.3511 | LR: 1.00e-06 | Time: 0.2s
+2026-01-08 00:37:51.599 | DEBUG    | models.trainer:save_checkpoint:709 - Checkpoint saved to backend/models/saved/best_model.pt
+2026-01-08 00:37:51.600 | INFO     | models.trainer:train:652 -   ✓ New best model saved (val_loss=0.4793)
+2026-01-08 00:37:51.600 | INFO     | models.trainer:train:664 - ============================================================
+2026-01-08 00:37:51.600 | INFO     | models.trainer:train:665 - Training complete!
+2026-01-08 00:37:51.600 | INFO     | models.trainer:train:666 -   Total time: 0.1 minutes
+2026-01-08 00:37:51.600 | INFO     | models.trainer:train:667 -   Best val_loss: 0.4793
+2026-01-08 00:37:51.600 | INFO     | models.trainer:train:668 -   Final accuracy: 70.00%
+2026-01-08 00:37:51.600 | INFO     | models.trainer:train:669 - ============================================================
+2026-01-08 00:37:51.621 | DEBUG    | models.trainer:save_checkpoint:709 - Checkpoint saved to backend/models/saved/final_model.pt
+2026-01-08 00:37:51.641 | DEBUG    | models.trainer:save_checkpoint:709 - Checkpoint saved to backend/models/saved/tacticsai.pt
+2026-01-08 00:37:51.641 | INFO     | __main__:train_model:234 - Model saved to backend/models/saved/tacticsai.pt
+2026-01-08 00:37:51.641 | INFO     | __main__:evaluate_model:241 - ============================================================
+2026-01-08 00:37:51.641 | INFO     | __main__:evaluate_model:242 - Evaluation
+2026-01-08 00:37:51.665 | INFO     | models.trainer:load_checkpoint:733 - Checkpoint loaded from backend/models/saved/best_model.pt (epoch 9)
+2026-01-08 00:37:51.666 | INFO     | __main__:evaluate_model:248 - Loaded best model for evaluation
+2026-01-08 00:37:51.687 | INFO     | __main__:evaluate_model:253 - ----------------------------------------
+2026-01-08 00:37:51.687 | INFO     | __main__:evaluate_model:254 - Final Metrics:
+2026-01-08 00:37:51.687 | INFO     | __main__:evaluate_model:255 -   Validation Loss: 0.4793
+2026-01-08 00:37:51.688 | INFO     | __main__:evaluate_model:256 -   Accuracy: 70.00%
+2026-01-08 00:37:51.688 | INFO     | __main__:evaluate_model:257 -   MAE: 0.3511
+2026-01-08 00:37:51.688 | INFO     | __main__:evaluate_model:260 - ----------------------------------------
+2026-01-08 00:37:51.688 | INFO     | __main__:evaluate_model:261 - Sample Predictions:
+2026-01-08 00:37:51.688 | INFO     | models.trainer:get_device:158 - Using Apple Silicon MPS
+2026-01-08 00:37:53.140 | INFO     | __main__:evaluate_model:303 -   Sample 1: ✓ Pred=0.492 (Balanced) | True=0.5 (Draw)
+2026-01-08 00:37:53.202 | INFO     | __main__:evaluate_model:303 -   Sample 2: ✓ Pred=0.491 (Balanced) | True=0.0 (Team B won)
+2026-01-08 00:37:53.261 | INFO     | __main__:evaluate_model:303 -   Sample 3: ✗ Pred=0.494 (Balanced) | True=1.0 (Team A won)
+2026-01-08 00:37:53.300 | INFO     | __main__:evaluate_model:303 -   Sample 4: ✗ Pred=0.492 (Balanced) | True=1.0 (Team A won)
+2026-01-08 00:37:53.351 | INFO     | __main__:evaluate_model:303 -   Sample 5: ✓ Pred=0.489 (Balanced) | True=0.0 (Team B won)
+2026-01-08 00:37:53.351 | INFO     | __main__:main:341 - ============================================================
+2026-01-08 00:37:53.351 | INFO     | __main__:main:342 - Training complete!
+2026-01-08 00:37:53.351 | INFO     | __main__:main:343 - ============================================================

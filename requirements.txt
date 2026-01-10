@@ -1,0 +1,39 @@
+# TacticsAI Backend Requirements
+# Core dependencies for the football tactics prediction engine
+
+# HTTP client
+requests>=2.31.0
+
+# Logging
+loguru>=0.7.2
+
+# Data processing
+pandas>=2.1.0
+numpy>=1.26.0
+pyarrow>=14.0.0  # For parquet caching
+
+# Web scraping
+beautifulsoup4>=4.12.0
+lxml>=5.0.0  # HTML parser for BeautifulSoup
+
+# Football data
+statsbombpy>=1.11.0  # StatsBomb open data API
+
+# Graph Neural Networks
+torch>=2.1.0
+torch-geometric>=2.4.0
+
+# Training utilities
+tqdm>=4.66.0  # Progress bars
+
+# API framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+
+# LLM for insights generation
+anthropic>=0.39.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0  # Coverage reporting
